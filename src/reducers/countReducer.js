@@ -4,7 +4,7 @@ import {
   TAKE_NAP,
   STUDY,
   CRAZY
-} from '../../actions/countClicks';
+} from '../actions/countClicks';
 
 export default function reudcer(state, action) {
   switch(action.type) {

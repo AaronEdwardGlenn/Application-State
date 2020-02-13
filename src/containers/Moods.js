@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import Controls from '../components/controls/Controls';
 import Face from '../components/face/Face';
+import {
+  isCrazy,
+  isTired,
+  isHungry,
+  isHyper,
+  isEducated
+} from '../actions/countClicks';
 
 const actions = [
   { name: 'DRINK_COFFEE', text: 'Drink Coffee', stateName: 'coffees' },
@@ -9,12 +16,6 @@ const actions = [
   { name: 'STUDY', text: 'Study', stateName: 'studies' },
   { name: 'CRAZY', text: 'Crazy', stateName: 'crazy' },
 ];
-
-export const isTired = state => state.coffees < 1 && state.naps < 1;
-export const isHyper = state => state.coffees > 3;
-export const isEducated = state => state.studies > 2;
-export const isHungry = state => state.snacks < 1;
-export const isCrazy = state => state.crazy > 10;
 
 
 export const getFace = state => {
@@ -29,6 +30,21 @@ export const getFace = state => {
   return ':)';
 };
 
+export function UpdateEmojiCount() {
+const [coffees, setCoffees] = useState(0)
+const [snacks, setSnacks] = useState(0)
+const [naps, setNaps] = useState(0)
+const [studies, setStudies] = useState(0)
+const [crazy, setCrazy] = useState(0)
+
+return (
+  <div>
+    <button value={coffees} onClick={() => setCoffees(coffees + 1)}></button>
+  </div>
+);
+
+}
+
 export default class Moods extends Component {
   state = {
     coffees: 0,
@@ -37,6 +53,7 @@ export default class Moods extends Component {
     studies: 0,
     crazy: 0
   }
+}
 
   handleSelection = name => {
     switch(name) {
@@ -59,6 +76,7 @@ export default class Moods extends Component {
         console.log(`unhandled name: ${name}`);
     }
   }
+  
 
   render() {
     const face = getFace(this.state);
@@ -74,4 +92,4 @@ export default class Moods extends Component {
       </>
     );
   }
-}
+
