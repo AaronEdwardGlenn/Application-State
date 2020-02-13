@@ -7,7 +7,7 @@ import {
   isHungry,
   isHyper,
   isEducated
-} from '../actions/countClicks';
+} from '../actions/allActions';
 
 const actions = [
   { name: 'DRINK_COFFEE', text: 'Drink Coffee', stateName: 'coffees' },

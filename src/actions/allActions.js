@@ -23,9 +23,4 @@ export const crazy = () => ({
   type: CRAZY
 });
 
-export const isTired = state => state.coffees < 1 && state.naps < 1;
-export const isHyper = state => state.coffees > 3;
-export const isEducated = state => state.studies > 2;
-export const isHungry = state => state.snacks < 1;
-export const isCrazy = state => state.crazy > 10;
-
+export const allOfTheActions = [eat_snack, drink_coffee, take_nap, study, crazy];

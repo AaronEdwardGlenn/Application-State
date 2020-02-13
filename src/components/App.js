@@ -1,8 +1,8 @@
 import React from 'react';
-import Moods from '../containers/Moods';
+import MoodsFn from '../containers/Moods';
 
 
 export default function App() {
-  return <Moods />;
+  return <MoodsFn />;
 }
 
