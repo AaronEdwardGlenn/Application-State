@@ -2,9 +2,13 @@
 
 exports[`Face component renders Face 1`] = `
 <Fragment>
-  <figure>
-    <img />
-    <figcaption />
-  </figure>
+  <p
+    className="Face"
+  >
+    <figure>
+      <img />
+      <figcaption />
+    </figure>
+  </p>
 </Fragment>
 `;

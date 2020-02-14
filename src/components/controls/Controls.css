@@ -1,12 +1,17 @@
 .Controls {
   text-align: center;
+  background-image: url(https://media2.giphy.com/media/hPlsN9Z6JNF4s/giphy.gif);
+  background-size: cover;
+  padding: 10px; 
   button {
-    padding: 0.4rem;
-    margin: 0 0.4rem;
-
-    border:none;
-
-    background-color: #0198E1;
+    padding: 0.8rem;
+    margin: 0 0.8rem;
+    border: 2px solid yellow;
+    background-color: green;
     color: #FFFFFF;
+  }
+  button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
   }
 }

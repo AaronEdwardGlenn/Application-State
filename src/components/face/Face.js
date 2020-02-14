@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Face.css';
 
 const Face = ({ emoji }) => (
   <>
-    <figure>
-      <img src={emoji.img}/>
-      <figcaption>{emoji.status}</figcaption>
-    </figure>
+    <p className={styles.Face}>
+      <figure>
+        <img src={emoji.img}/>
+        <figcaption>{emoji.status}</figcaption>
+      </figure>
+    </p>
   </>
 );
 

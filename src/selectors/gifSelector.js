@@ -1,8 +1,8 @@
-export const isTired = state => state.coffees < 1 && state.naps < 1;
+export const isCrazy = state => state.craziez > 5;
+export const isTired = state => state.coffees > 1 && state.naps < 1;
 export const isHyper = state => state.coffees > 3;
 export const isEducated = state => state.studies > 2;
-export const isHungry = state => state.snacks < 1;
-export const isCrazy = state => state.snacks > 5;
+export const isHungry = state => state.snacks > 1;
 
 export const getGif = state => {
 
@@ -20,7 +20,7 @@ export const getGif = state => {
 
   if(isHungry(state)) return { status: 'I NEED FOOD NOW!', img: 'https://media0.giphy.com/media/146ZStCLIwlC3m/source.gif' };
 
-  return ':)';
+  return  { status: 'Press the buttons, Change your mood!', img: 'https://media.giphy.com/media/139lMwJ9ow7bKE/giphy.gif' };
 };
 
 

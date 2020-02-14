@@ -36,8 +36,8 @@ exports[`MoodsFn matches a snapshot 1`] = `
   <Face
     emoji={
       Object {
-        "img": "https://media.giphy.com/media/wVcNP3TnXbl84/giphy.gif",
-        "status": "ANGRY FACE!",
+        "img": "https://media.giphy.com/media/139lMwJ9ow7bKE/giphy.gif",
+        "status": "Press the buttons, Change your mood!",
       }
     }
   />
