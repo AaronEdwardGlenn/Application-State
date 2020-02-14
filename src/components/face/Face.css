@@ -1,5 +1,12 @@
 .Face {
   padding: 2rem;
   text-align: center;
-  font-size: 70vh;
-}
+  font-size: 70px;
+  background-color: blue;
+  background-position-y: 100%;
+    figure{
+      img{width: 50%
+      };
+    }
+  }
+

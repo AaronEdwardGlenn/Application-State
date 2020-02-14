@@ -2,22 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Controls.css';
 
-const Controls = ({ actions, handleSelection }) => (
+const Controls = ({ dispatch }) => (
   <section className={styles.Controls}>
-    {actions.map(({ name, text, count }) => (
-      <button key={name} onClick={() => handleSelection(name)}>
-        {text || name} {!!count && `- ${count}`}
+    {dispatch.map(obj => (
+      <button key={obj.text} onClick={obj.function}>
+        {obj.text} {!!obj.count && `- ${obj.count}`}
       </button>
     ))}
   </section>
 );
 
 Controls.propTypes = {
-  actions: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    text: PropTypes.string
+  dispatch: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    count: PropTypes.number,
+    function: PropTypes.func.isRequired,
   })).isRequired,
-  handleSelection: PropTypes.func.isRequired
+
 };
 
 export default Controls;

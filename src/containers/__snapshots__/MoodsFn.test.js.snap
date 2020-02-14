@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoodsFn matches a snapshot 1`] = `
+<Fragment>
+  <Controls
+    dispatch={
+      Array [
+        Object {
+          "count": 0,
+          "function": [Function],
+          "text": "Drink Coffee",
+        },
+        Object {
+          "count": 0,
+          "function": [Function],
+          "text": "Eat Snack",
+        },
+        Object {
+          "count": 0,
+          "function": [Function],
+          "text": "Take that Nap",
+        },
+        Object {
+          "count": 0,
+          "function": [Function],
+          "text": "Study Sesh",
+        },
+        Object {
+          "count": 0,
+          "function": [Function],
+          "text": "Go Cray Cray",
+        },
+      ]
+    }
+  />
+  <Face
+    emoji={
+      Object {
+        "img": "https://media.giphy.com/media/139lMwJ9ow7bKE/giphy.gif",
+        "status": "Press the buttons, Change your mood!",
+      }
+    }
+  />
+</Fragment>
+`;
