@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import Controls from '../components/controls/Controls';
 import Face from '../components/face/Face';
 import { allOfTheActions } from '../actions/allActions';
-import { getFace } from './Moods';
+import { getGif } from '../selectors/gifSelector';
 import countReducer from '../reducers/countReducer';
 
 const MoodsFn = () => {
@@ -14,7 +14,9 @@ const MoodsFn = () => {
     craziez: 0
   }); 
 
-  let face = getFace(state);
+  let moodStatus = getGif(state);
+  console.log(imgUrl);
+  
 
   let [eat_snack, drink_coffee, take_nap, study, crazy] = allOfTheActions;
 
@@ -50,7 +52,7 @@ const MoodsFn = () => {
     <>
 
       <Controls dispatch={dispatchObj} />
-      <Face emoji={face} />
+      <Face emoji={moodStatus} />
 
     </>
   );
