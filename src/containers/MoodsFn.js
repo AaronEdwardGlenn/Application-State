@@ -14,9 +14,7 @@ const MoodsFn = () => {
     craziez: 0
   }); 
 
-  let moodStatus = getGif(state);
-  console.log(imgUrl);
-  
+  let moodStatus = getGif(state);  
 
   let [eat_snack, drink_coffee, take_nap, study, crazy] = allOfTheActions;
 

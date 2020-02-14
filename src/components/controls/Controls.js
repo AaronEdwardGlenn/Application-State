@@ -19,7 +19,6 @@ Controls.propTypes = {
     function: PropTypes.func.isRequired,
   })).isRequired,
 
-  handleSelection: PropTypes.func.isRequired
 };
 
 export default Controls;
